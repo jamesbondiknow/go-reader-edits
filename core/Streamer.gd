@@ -260,8 +260,8 @@ func tex_thread_load(arr): #value 0 = index, 1 = thread ID
 	var image_w = image.get_width()
 	var image_h = image.get_height()
 	var texture = ImageTexture.new()
-	
-	texture.create_from_image(image,7)
+
+	texture.create_from_image(image, Texture.FLAG_MIPMAPS | Texture.FLAG_FILTER)
 #	print(texture)
 	
 	call_deferred("tex_thread_finish", arr)
